@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Strona Demostracja 1 (Pizzeria)",
             description: "To jest demostracyjna landing page pizzeri fikcyjnej",
             imageUrl: "https://via.placeholder.com/400x200?text=Projekt+1", // Zmień na obrazek z Twojego projektu
-            link: "https://twoja-strona-demo1.com" // Zmień na link do Twojej strony demo
+            link: "pizza/index.html" // Zmień na link do Twojej strony demo
         },
         {
             title: "Strona Demostracja 2",
@@ -65,4 +65,5 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(card);
     });
+
 });
