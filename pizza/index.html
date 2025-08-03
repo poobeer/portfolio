@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Fantasia - Najlepsza pizza w mieście!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+        .bg-hero {
+            /* Zaktualizowane zdjęcie pizzy w sekcji hero */
+            background-image: url('https://relaxo.pl/wp-content/uploads/2024/12/sala-imprezowa.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .menu-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e53e3e;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c53030;
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+
+    <!-- Nagłówek i Nawigacja -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-bold text-red-600 rounded-md">Pizzeria Fantasia</a>
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop menu -->
+            <ul class="hidden md:flex space-x-6 text-gray-700">
+                <li><a href="#menu" class="hover:text-red-600 transition-colors duration-300">Menu</a></li>
+                <li><a href="#about" class="hover:text-red-600 transition-colors duration-300">O nas</a></li>
+                <li><a href="#contact" class="hover:text-red-600 transition-colors duration-300">Kontakt</a></li>
+                <li><a href="#hero" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition-colors duration-300">Zamów teraz!</a></li>
+            </ul>
+        </nav>
+        <!-- Mobile menu content -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-4">
+            <ul class="flex flex-col items-center space-y-4 text-gray-700">
+                <li><a href="#menu" class="block py-2 hover:text-red-600 transition-colors duration-300">Menu</a></li>
+                <li><a href="#about" class="block py-2 hover:text-red-600 transition-colors duration-300">O nas</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-red-600 transition-colors duration-300">Kontakt</a></li>
+                <li><a href="#hero" class="block py-2 bg-red-600 text-white px-4 rounded-full hover:bg-red-700 transition-colors duration-300">Zamów teraz!</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-hero min-h-screen flex items-center justify-center text-center">
+            <div class="bg-black bg-opacity-50 p-8 md:p-12 rounded-lg max-w-3xl mx-auto text-white shadow-xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter mb-4">
+                    Prawdziwie włoska pizza, z pasją!
+                </h1>
+                <p class="text-lg md:text-xl font-light mb-8">
+                    Każdy kawałek to podróż do serca Neapolu. Odkryj smak tradycji i świeżości.
+                </p>
+                <a href="#menu" class="bg-red-600 text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+                    Zobacz nasze menu
+                </a>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Nasze Menu</h2>
+                
+                <!-- Kategoria: Pizze Klasyczne -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-6 border-b-2 border-red-600 pb-2 text-gray-700">Pizze Klasyczne</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Pizza Margherita -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <!-- Poprawione zdjęcie dla Margherity -->
+                            <img class="menu-item-image" src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg   " alt="Pizza Margherita">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-gray-800">Margherita</h4>
+                                <p class="text-gray-600 mb-4">Sos pomidorowy, ser mozzarella, świeża bazylia, oliwa z oliwek.</p>
+                                <span class="text-red-600 text-2xl font-bold">32 zł</span>
+                            </div>
+                        </div>
+                        <!-- Pizza Capricciosa -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <!-- Poprawione zdjęcie dla Capricciosy -->
+                            <img class="menu-item-image" src="https://www.dominospizza.pl/DominosPizza/media/Images/modules/blog/desktop/1846-x-1028-Capricciosa.jpg" alt="Pizza Capricciosa">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-gray-800">Capricciosa</h4>
+                                <p class="text-gray-600 mb-4">Sos pomidorowy, ser mozzarella, szynka parmeńska, pieczarki, karczochy, oliwki.</p>
+                                <span class="text-red-600 text-2xl font-bold">45 zł</span>
+                            </div>
+                        </div>
+                        <!-- Pizza Funghi -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <!-- Poprawione zdjęcie dla Funghi -->
+                            <img class="menu-item-image" src="https://najlepszewkuchni.pl/storage/recipes/2017_11_15/QwcI4SMkbIGr4RztSHnr.jpg" alt="Pizza Funghi">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-gray-800">Funghi</h4>
+                                <p class="text-gray-600 mb-4">Sos pomidorowy, ser mozzarella, świeże pieczarki.</p>
+                                <span class="text-red-600 text-2xl font-bold">35 zł</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategoria: Pizze Specjalne -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-6 border-b-2 border-red-600 pb-2 text-gray-700">Pizze Specjalne</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Pizza Carbonara -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <!-- Poprawione zdjęcie dla Carbonary -->
+                            <img class="menu-item-image" src="https://static.fajnegotowanie.pl/media/przepis/106/10650/main-l_l.webp" alt="Pizza Carbonara">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-gray-800">Carbonara</h4>
+                                <p class="text-gray-600 mb-4">Biały sos, ser mozzarella, boczek, cebula, świeże jajko.</p>
+                                <span class="text-red-600 text-2xl font-bold">48 zł</span>
+                            </div>
+                        </div>
+                        <!-- Pizza Vege -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <!-- Poprawione zdjęcie dla Vege -->
+                            <img class="menu-item-image" src="https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?q=80&w=2670&auto=format&fit=crop" alt="Pizza Vege">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-gray-800">Vege</h4>
+                                <p class="text-gray-600 mb-4">Sos pomidorowy, mozzarella, papryka, cebula, kukurydza, pomidory koktajlowe.</p>
+                                <span class="text-red-600 text-2xl font-bold">42 zł</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <img class="rounded-lg shadow-xl" src="https://michallis.pl/wp-content/uploads/2023/04/PIZZATOPIA_02.jpg" alt="Wnętrze pizzerii">
+                    </div>
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Nasza historia</h2>
+                        <p class="text-gray-600 text-lg mb-4">
+                            W Pizzerii Fantasia wierzymy, że najlepsza pizza powstaje z pasji i najlepszych składników. Nasza receptura to starannie dobrana mąka, długo dojrzewające ciasto i świeże, lokalne produkty.
+                        </p>
+                        <p class="text-gray-600 text-lg">
+                            Przygotowujemy każdą pizzę z dbałością o detale, wypiekając ją w tradycyjnym piecu opalanym drewnem, co nadaje jej niezapomniany aromat i chrupiące brzegi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Skontaktuj się z nami</h2>
+                        <p class="text-gray-600 text-lg mb-6">
+                            Masz pytania? Chcesz złożyć zamówienie telefoniczne lub zarezerwować stolik? Zapraszamy!
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <p class="text-gray-700 text-lg font-medium"><strong class="text-red-600">Adres:</strong> ul. Pizzowa 10, 00-123 Smakowo</p>
+                            <p class="text-gray-700 text-lg font-medium"><strong class="text-red-600">Telefon:</strong> +48 123 456 789</p>
+                            <p class="text-gray-700 text-lg font-medium"><strong class="text-red-600">E-mail:</strong> kontakt@pizzeriafantasia.pl</p>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Godziny otwarcia</h3>
+                        <p class="text-gray-700 text-lg">Pon - Pt: 12:00 - 22:00</p>
+                        <p class="text-gray-700 text-lg">Sob - Niedz: 13:00 - 23:00</p>
+                    </div>
+
+                    <!-- Contact form -->
+                    <div class="lg:w-1/2">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">Napisz do nas</h3>
+                            <form>
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Imię i nazwisko</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-600" placeholder="Twoje imię i nazwisko">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Adres e-mail</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-600" placeholder="Twój adres e-mail">
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="block text-gray-700 font-medium mb-2">Wiadomość</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-600" placeholder="Twoja wiadomość"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">Wyślij wiadomość</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Pizzeria Fantasia. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript dla responsywnej nawigacji i płynnego przewijania
+
+        // Pobranie elementów DOM
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        // Obsługa przycisku menu mobilnego
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Obsługa płynnego przewijania
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Zapobieganie domyślnemu zachowaniu linków
+                
+                // Pobranie identyfikatora sekcji docelowej
+                const targetId = event.currentTarget.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                // Sprawdzenie, czy sekcja docelowa istnieje
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                // Ukrycie menu mobilnego po kliknięciu
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
