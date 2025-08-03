@@ -4,20 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Strona Demostracja 1 (Pizzeria)",
             description: "To jest demostracyjna landing page pizzeri fikcyjnej",
-            imageUrl: "https://via.placeholder.com/400x200?text=Projekt+1", // Zmień na obrazek z Twojego projektu
+            imageUrl: "zdjecia/pizzeria.png", // Zmień na obrazek z Twojego projektu
             link: "pizza/index.html" // Zmień na link do Twojej strony demo
         },
         {
-            title: "Strona Demostracja 2",
-            description: "Drugi projekt demo. Skomplikowany design e-commerce z dynamicznymi elementami.",
-            imageUrl: "https://via.placeholder.com/400x200?text=Projekt+2",
-            link: "https://twoja-strona-demo2.com"
+            title: "Strona Demostracja 2(Komis Samochodowy)",
+            description: "Drugi projekt demo. Landing page komisu samochodowego.",
+            imageUrl: "zdjecia/komis.png",
+            link: "komis/index.html"
         },
         {
-            title: "Strona Demostracja 3",
-            description: "Trzeci projekt, prosty blog z efektem paralaksy w nagłówku.",
-            imageUrl: "https://via.placeholder.com/400x200?text=Projekt+3",
-            link: "https://twoja-strona-demo3.com"
+            title: "Dopiero Bedzie",
+            description: "Trzeci projekt demo.",
+            imageUrl: "https://i.scdn.co/image/ab67616d0000b27323a8321bd17fe693210812fe",
+            link: ""
         }
     ];
 
@@ -65,5 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(card);
     });
-
 });
